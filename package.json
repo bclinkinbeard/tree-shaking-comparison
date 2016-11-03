@@ -1,0 +1,28 @@
+{
+  "name": "tree-shaking-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:rollup": "rollup -c",
+    "minify": "uglifyjs bundle.rollup.js -c -m -o bundle.rollup.min.js",
+    "rollup": "npm run build:rollup && npm run minify",
+    "webpack": "webpack",
+    "bundle": "npm run rollup && npm run webpack"
+  },
+  "keywords": [],
+  "author": "Ben Clinkinbeard <ben.clinkinbeard@gmail.com> (http://benclinkinbeard.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "6.18.2",
+    "babel-loader": "6.2.7",
+    "babel-preset-es2015": "6.18.0",
+    "rollup": "0.36.3",
+    "rollup-plugin-node-resolve": "2.0.0",
+    "uglify-js": "2.7.4",
+    "webpack": "2.1.0-beta.25"
+  },
+  "dependencies": {
+    "d3-array": "1.0.1"
+  }
+}
